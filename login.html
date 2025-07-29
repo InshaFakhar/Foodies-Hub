@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Foodies Hub</title>
+    <style>
+        body {
+            background-image: url("images.png/background.jpg");
+           background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 50px;
+            overflow: hidden;
+
+        }
+
+
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .signin-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .signin-button:hover {
+            background-color: #0056b3;
+        }
+        input:hover{
+            background-color: rgb(241, 227, 227);
+        }
+        #error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div class="login-container">
+        <img src="images.png/logo.png" alt="Hub Logo" style="width: 60px; margin-bottom: 10px;">
+
+        <h1>Login To FoodiesHub</h1>
+        <p class="register-text" id="register-link">Don't have an account? <a href="#">Register Here</a></p>
+        <form onsubmit=" return validateform()">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            <input type="submit" value="login " class="signin-button">
+            <h3 id="error"></h3>
+        </form>
+    </div>
+
+
+    <script>
+        function validateform() {
+           
+            let emaill = document.getElementById("email").value;
+            let pass = document.getElementById("password").value;
+            let errormsg = "";
+            if (emaill === "" || !emaill.includes("@")) {
+                errormsg += "valid email is required.<br>";
+            }
+            if (pass.length < 6) {
+                errormsg += "password must be atleast 6 characters. <br>";
+            }
+            if (errormsg !== "") {
+                document.getElementById("error").innerHTML = errormsg;
+                return false;
+            }
+             alert("you are login successfully!");
+            return true;
+        }
+
+
+        document.getElementById("register-link").addEventListener("click", function (event) {
+            event.preventDefault(); // Default link action ko rok deta hai
+
+            // Ab yahan tum kuch bhi kar sakte ho:
+            alert("Register page coming soon!");
+
+            // Ya kisi naye page pe redirect bhi kar sakte ho:
+            // window.location.href = "register.html";
+        });
+    </script>
+
+
+
+</html>

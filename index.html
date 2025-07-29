@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title> FoodiesHub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images.jpg">
+  <script src="script.js"> </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="images.png/logo.png" alt="Foodies Hub " class="logo" width="26px" height="26px">
+      <span class="site-name"> Foodies Hub</span>
+    </div>
+    <div class="nav-center">
+
+
+      <a href="#home"> Home</a>
+      <a href="#menu"> Menu</a>
+      <a href="#special"> Special</a>
+      <a href="about"> About Us</a>
+      <a href="#contact"> Contact</a>
+
+    </div>
+    <div class="nav-right">
+      <input type="text" placeholder="Search...">
+      <button class="add-to-cart-btn">🛒</button>
+      <button class="login-btn" onclick="loginbtn()" > <a href="login.html">Login </a></button> 
+    </div>
+    </div>
+
+  </nav>
+
+  <section id="home" class="hero-section">
+  <div class="hero-text">
+    <h1>Welcome Foodies!</h1>
+    <p>Deliciousness jumping into the mouth!</p>
+    
+    <div  id="menu" class="hero-btns">
+      <button onclick="exploremenu()" id="menu" class="menu">Explore Menu</button>
+    </div>
+  </div>
+</section>
+
+
+  <section id="menu" class="menu-section">
+    <h2>Our Menu</h2>
+    <div class="menu-container">
+
+     
+       <div class="menu-item">
+        <img src="images.png/Spicy dum biryani.jpg" alt="Chicken Biryani">
+        <h3>Chicken Biryani</h3>
+        <p>Spicy and aromatic rice with chicken</p>
+        <span class="price">Rs. 450</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+       <div class="menu-item">
+        <img src="images.png/pizza.webp" alt="cheesy pizza">
+        <h3>Cheesy Pizza</h3>
+        <p>A slice of happiness!</p>
+        <span class="price">Rs. 1500</span>
+        <button class="cart-btn">Add to Cart</button>
+        <p id="cart-count"></p>
+      </div>
+
+      <div class="menu-item">
+        <img src="images.png/grilled-sandwich-1.webp" alt="Grilled Sandwich">
+        <h3>Grilled Sandwich</h3>
+        <p>Crispy outside, melty inside!</p>
+        <span class="price">Rs. 600</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="images.png/cream-cheese-pasta.jpg" alt="Creamy cheese pizza">
+        <h3>Creamy cheese pizza</h3>
+        <p>Extra cheesy slice!</p>
+        <span class="price">Rs. 750</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="images.png/zinger-double-decker-burger.jpg" alt="Zinger Burger">
+        <h3>Zinger Burger</h3>
+        <p>Crunchy and spicy!</p>
+        <span class="price">Rs. 650</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="images.png/Chicken-Karahi-Recipe1.jpg" alt="Chicken Karahi">
+        <h3>Chicken Karahi</h3>
+        <p>Full of desi spice!</p>
+        <span class="price">Rs. 1000</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="images.png/vegan-garlic-naan-3.jpg.webp" alt="Garlic Naan">
+        <h3>Garlic Naan</h3>
+        <p>Soft and buttery!</p>
+        <span class="price">Rs. 150</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="images.png/loaded fries.jpg" alt="Loaded fries">
+        <h3>Loaded fries</h3>
+        <p>Cheese loaded treat!</p>
+        <span class="price">Rs. 500</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="images.png/momos copy.png" alt="Chicken Momos">
+        <h3>Chicken Momos</h3>
+        <p>Spicy and aromatic rice with chicken</p>
+        <span class="price">Rs. 550</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="images.png/chiceknsteak.jpg" alt="Chicken Steak">
+        <h3>Chicken Steak</h3>
+        <p>Steamed & tasty!</p>
+        <span class="price">Rs. 850</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    
+      <div class="menu-item">
+        <img src="images.png/broast.jpg" alt="Chicken Broast">
+        <h3>Chicken Broast</h3>
+        <p>Crispy & juicy bite!</p>
+        <span class="price">Rs. 700</span>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+
+      <!-- Add more dishes like this -->
+    </div>
+  </section>
+
+
+  <section id="special" class="special-dishes">
+    <h2>Our Special Dishes</h2>
+    <div class="dishes-container">
+
+      <!-- Dish 1 -->
+      <div class="dish-card">
+        <i class="fas fa-heart heart-icon"></i>
+        <img src="images.png/burger.png" alt="Zinger Burger">
+        <h3>Zinger Burger</h3>
+        <p class="price">Rs. 650</p>
+        <button  class="or">Order Now</button>
+      </div>
+
+      <!-- Dish 2 -->
+      <div class="dish-card">
+        <i class="fas fa-heart heart-icon"></i>
+        <img src="images.png/biryani.jpg" alt="Chicken Biryani">
+        <h3>Chicken Biryani</h3>
+        <p class="price">Rs. 400</p>
+        <button   class="or">Order Now</button>
+      </div>
+
+      <!-- Dish 3 -->
+      <div class="dish-card">
+        <i class="fas fa-heart heart-icon"></i>
+        <img src="images.png/pizza.webp" alt="Pizza Slice">
+        <h3>Cheesy Pizza</h3>
+        <p class="price">Rs. 1500</p>
+        <button  class="or">Order Now</button>
+      </div>
+
+      <!-- Dish 4 -->
+      <div class="dish-card">
+        <i class="fas fa-heart heart-icon"></i>
+        <img src="images.png/pasta.jpg" alt="Grilled Sandwich">
+        <h3>Creamy Pasta</h3>
+        <p class="price">Rs. 700</p>
+        <button  class="or">Order Now</button>
+      </div>
+
+    </div>
+  </section>
+  <section class="contact" id="contact">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>Have questions or feedback? We'd love to hear from you!</p>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+
+</body>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section about">
+      <h2>About Us</h2>
+      <p>We provide the best quality food at affordable prices. Visit us for a delicious experience.</p>
+    </div>
+
+    <div class="footer-section links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section ccontact">
+      <h2>Contact Info</h2>
+      <p><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</p>
+      <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+      <p><i class="fas fa-envelope"></i> support@restaurant.com</p>
+    </div>
+
+    <div class="footer-section social">
+      <h2>Follow Us</h2>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Restaurant. All Rights Reserved.
+  </div>
+</footer>
+
+
+
+
+</html>
+
+
+
+
+
+
